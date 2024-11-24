@@ -41,13 +41,13 @@ gltf-model="#modelo2" scale="0.1 0.1 0.1 " class="clickable" gesture-handler>
 <script>
         var A_ricardin = document.getElementById('audio_ricardin');
         document.querySelector('[value="11"]').addEventListener('markerFound', function () {
-				audio_ricardin.play();
+				A_ricardin.play();
 			});
 
 			
 			document.querySelector('[value="11"]').addEventListener('markerLost', function () {
-				audio_ricardin.pause();
-				audio_ricardin.currentTime = 0; // reiniciar el audio desde el inicio
+				A_ricardin.pause();
+				A_ricardin.currentTime = 0; // reiniciar el audio desde el inicio
 			});
 </script>
         
