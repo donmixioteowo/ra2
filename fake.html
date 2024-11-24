@@ -17,19 +17,96 @@
 
         id="scene">
         <a-assets>
+            <a-asset-item id="modelo" src="amlo_salsa_morena.glb"></a-asset-item>
+            <a-asset-item id="modelo2" src="corona_extra.glb"></a-asset-item>
+            <a-asset-item id="modelo3" src="coyote_speaker_texture_redo.glb"></a-asset-item>
+            <a-asset-item id="modelo4" src="farmacia_guadalajara.glb"></a-asset-item>
+            <a-asset-item id="modelo5" src="mama_lucha.glb"></a-asset-item>
+            <a-asset-item id="modelo6" src="mexican_chili.glb"></a-asset-item>
+            <a-asset-item id="modelo7" src="mexican_starter_pack.glb"></a-asset-item>
+            <a-asset-item id="modelo8" src="mexico_national_palace_press_conference.glb"></a-asset-item>
+            <a-asset-item id="modelo9" src="microbus_mexico_df.glb"></a-asset-item>
+            <a-asset-item id="modelo10" src="oso_bimbo.glb"></a-asset-item>
+            <a-asset-item id="modelo11" src="peluche_de_dr._simi.glb"></a-asset-item>
+            <a-asset-item id="modelo12" src="silla_de_plastico_y_caguama.glb"></a-asset-item>
+            <a-asset-item id="modelo13" src="tacos.glb"></a-asset-item>
+            <a-asset-item id="modelo14" src="tienda_elektra_y_banco_azteca.glb">
             
         </a-assets>
             
         <a-marker type="barcode" value="11" raycaster="objects: .clickable" emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity>
-                    
+            <a-entity
+                gltf-model="#modelo5" scale=".05 .05 .05" rotation="-80 -150 150" position=".5 0 0" class="clickable" gesture-handler 
+                sound="src: #audio_botarga; autoplay: false; volume: 1">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo10" scale=".001 .001 .001" rotation="-80 -150 150" class="clickable" gesture-handler>
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo11" scale=".1 .1 .1" rotation="-80 -150 150" position="-.5 0 0" class="clickable" gesture-handler>
+            </a-entity>
+
+        </a-marker>
+
+        <a-marker type="barcode" value="13" raycaster="objects: .clickable" emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+            gltf-model="#modelo8" scale=".3 .3 .3" rotation="-90 90 -90" class="clickable" gesture-handler
+            sound="src: #audio_amlo; autoplay: false; volume: 1">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo" scale="1 1 1" position="0 -0.166 -.1" rotation="-90 0 0" class="clickable" gesture-handler>
             </a-entity>
         </a-marker>
+
         <a-marker type="barcode" value="16" raycaster="objects: .clickable" emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity>
+            <a-entity
+                gltf-model="#modelo2" scale=".3 .3 .3" rotation="90 90 -90" position=".3 2 0" class="clickable" gesture-handler
+                sound="src: #audio_oxxo; autoplay: false; volume: 1">
+            </a-entity>
 
+            <a-entity
+                gltf-model="#modelo3" scale=".1 .1 .1" rotation="90 90 -90" position=".2 2 -.1" class="clickable" gesture-handler>
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo12" scale=".1 .1 .1" rotation="90 90 -90" position="0 2 0" class="clickable" gesture-handler>
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo13" scale=".1 .1 .1" position="0 0 0" rotation="0 -90 90" class="clickable" gesture-handler>
+            </a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="15" raycaster="objects: .clickable" emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#modelo4" scale=".1 .1 .1" rotation="-90 -60 60" position="-2 -.1 0" class="clickable" gesture-handler
+                sound="src: #audio_micro; autoplay: false; volume: 1">
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo9" scale=".1 .1 .1" rotation="20 90 -90" class="clickable" gesture-handler>
+            </a-entity>
+
+            <a-entity
+                gltf-model="#modelo14" scale=".1 .1 .1" rotation="-90 -60 60" position="0 -.1 0" class="clickable" gesture-handler>
+            </a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="14" raycaster="objects: .clickable" emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#modelo6" scale=".08 .08 .08" rotation="0 90 -90" position="-.5 0 0" class="clickable" gesture-handler
+                sound="src: #audio_mochila; autoplay: false; volume: 1">
+            </a-entity>
+            <a-entity
+                gltf-model="#modelo7" scale=".01 .01 .01" rotation="0 90 -90" position="0 0 0" class="clickable" gesture-handler>
             </a-entity>
         </a-marker>
 
