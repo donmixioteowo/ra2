@@ -17,14 +17,17 @@ renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-det
 
 id="scene">
 <a-assets>
-<a-asset-item id="modelo" src="modelos/lowpoly_origami_penguin.glb"></a-asset-item>
-<a-asset-item id="modelo2" src="modelos/genshin_impact_barbara.glb"></a-asset-item>
+        <a-asset-item id="modelo" src="modelos/lowpoly_origami_penguin.glb"></a-asset-item>
+        <a-asset-item id="modelo2" src="modelos/genshin_impact_barbara.glb"></a-asset-item>
+        <audio id="audio_ricardin" src="audios/19_2000.mp3" preload="auto"></audio>
 </a-assets>
+        
 <a-marker type="barcode" value="11" raycaster="objects: .clickable" emitevents="true"
 cursor="fuse: false; rayOrigin: mouse;">
-<a-entity
-gltf-model="#modelo" scale="1.0 1.0 1.0" rotation="4.112 0.306 1.457" position="0.019 -1.171 -0.084"class="clickable" gesture-handler>
-</a-entity>
+        <a-entity
+                gltf-model="#modelo" scale="1.0 1.0 1.0" rotation="4.112 0.306 1.457" position="0.019 -1.171 -0.084"class="clickable" gesture-handler
+                sound="src: #audio_ricardin; autoplay: false; volume: 1">
+        </a-entity>
 </a-marker>
 <a-marker type="barcode" value="16" raycaster="objects: .clickable" emitevents="true"
 cursor="fuse: false; rayOrigin: mouse;">
@@ -35,11 +38,19 @@ gltf-model="#modelo2" scale="0.1 0.1 0.1 " class="clickable" gesture-handler>
 
 <a-entity camera></a-entity>
 </a-scene>
-</body>
-</html>
-        
+<script>
+        var A_ricardin = document.getElementById('audio_ricardin');
+        document.querySelector('[value="11"]').addEventListener('markerFound', function () {
+				audio_ricardin.play();
+			});
 
-        <a-entity camera> </a-entity>
+			
+			document.querySelector('[value="11"]').addEventListener('markerLost', function () {
+				audio_ricardin.pause();
+				audio_ricardin.currentTime = 0; // reiniciar el audio desde el inicio
+			});
+</script>
+        
         
     </a-scene>
 </body>
