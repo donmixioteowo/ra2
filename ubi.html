@@ -17,7 +17,10 @@
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-entity geometry="primitive: box" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 20.398404; latitude: -101.223234;"/>
+        <a-assets>
+            <a-asset-item id="modelo" src="modelos/lowpoly_origami_penguin.glb"></a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="#modelo" scale="0.5 0.5 0.5" gps-entity-place="longitude: 20.398404; latitude: -101.223234;"/>
         <a-camera gps-camera rotation-reader></a-camera>
 	</a-scene>
 </body>
